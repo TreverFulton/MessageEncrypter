@@ -58,11 +58,6 @@ Feel free to open issues or pull requests for any improvements or bug fixes.
  - [README.md: The Ultimate Guide](https://tiloid.com/p/readme-md-the-ultimate-guide)
 
 
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-
 ## Feedback
 
 If you have any feedback, please reach out to me at trever.fulton@mohawkcollege.ca
