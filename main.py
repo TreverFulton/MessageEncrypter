@@ -29,7 +29,7 @@ def decrypt(path, password):
     try:
         return f.decrypt(data['token'].encode()).decode()
     except InvalidToken:
-        print("Password could not be validated.")
+        return "Message failed to decrypt. Ensure provided password and file are correct."
 
 
 def main():
@@ -62,7 +62,6 @@ def main():
     args = parser.parse_args()
 
     if args.mode == 'encrypt':
-        print("true")
         if args.message is None:
             parser.error("Message is required for encryption")
         if os.path.exists(args.file) and not args.overwrite:
