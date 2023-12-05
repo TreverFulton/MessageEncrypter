@@ -50,23 +50,23 @@ def decrypt(path, password):
 def main():
     parser = ArgumentParser(description='Writes and Reads encrypted text using a supplied key value.')
 
-    parser.add_argument("-f", "--file",                 # Takes in filepath to encrypt to/decrypt from
+    parser.add_argument("-f", "--file",                              # Takes in filepath to encrypt to/decrypt from
                         help="Destination file for your message",
                         type=str,
                         required=True,                               # Both encrypt and decrypt require file path
                         )
 
-    parser.add_argument("-p", "--password",             # Takes in password to encrypt/decrypt with
+    parser.add_argument("-p", "--password",                          # Takes in password to encrypt/decrypt with
                         help="Password used to encrypt message",
                         type=str,
                         required=True,                               # Both encrypt and decrypt require a password
                         )
 
-    parser.add_argument("-m", "--message",              # Message that will get encrypted to specified file
+    parser.add_argument("-m", "--message",                           # Message that will get encrypted to specified file
                         help="Message to be encrypted",
                         type=str)                                    # Message only needs to be provided for encrypting
 
-    parser.add_argument("-o", "--overwrite",            # Used as protection to write over existing files
+    parser.add_argument("-o", "--overwrite",                         # Used as protection to write over existing files
                         help="Existing files will be overwritten "
                              "when this flag is used",
                         type=bool,
@@ -75,7 +75,7 @@ def main():
                         default=False,                               # If flag IS NOT used, default fo FALSE
                         )
 
-    parser.add_argument("mode",                         # Must choose to either encrypt or decrypt
+    parser.add_argument("mode",                                      # Must choose to either encrypt or decrypt
                         choices={'encrypt', 'decrypt'},              # Only these two options are allowed
                         help="Choose whether you want to "
                              "encrypt a message or decrypt an "
